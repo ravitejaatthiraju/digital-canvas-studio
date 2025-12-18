@@ -5,39 +5,48 @@ import { ChevronLeft, ChevronRight, ExternalLink, Github } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: 'AI Dashboard',
-    description: 'A real-time analytics dashboard powered by machine learning for predictive insights and data visualization.',
-    image: '🤖',
-    tags: ['React', 'Python', 'TensorFlow'],
-    liveUrl: '#',
-    codeUrl: '#',
+    title: 'Authenticated Login System',
+    description: 'A full-stack authentication system featuring secure Email/Password login and OAuth 2.0 integration for Google and LinkedIn.',
+    image: 'images/Login System.png',
+    tags: ['HTML5', 'Tailwind CSS', 'JavaScript (Fetch API)', 'Flask', 'Python 3','OAuth 2.0 (OpenID Connect)','Gunicorn (Production WSGI server)'],
+    liveUrl: 'https://ravitejaatthiraju.github.io/flask-login-system/',
+    codeUrl: 'https://github.com/ravitejaatthiraju/flask-login-system',
   },
   {
     id: 2,
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.',
-    image: '🛒',
-    tags: ['Next.js', 'Stripe', 'PostgreSQL'],
-    liveUrl: '#',
-    codeUrl: '#',
+    title: 'AI Safety Shield',
+    description: 'AI Safety Shield is a real-time multimodal surveillance system that uses computer vision and audio analysis to detect weapons, distress sounds, aggressive behavior, and overcrowding, and instantly alerts administrators via a live dashboard and email.',
+    image: 'images/AI Safety Shield (2).png',
+    tags: ['Flask', 'OpenCV', 'Ultralytics YOLOv8','MediaPipe','SpeechRecognition','Python','React.js','Tailwind CSS'],
+    liveUrl: 'https://github.com/ravitejaatthiraju/AI-Safety-Shield',
+    codeUrl: 'https://github.com/ravitejaatthiraju/AI-Safety-Shield',
   },
   {
     id: 3,
-    title: 'Social Media App',
-    description: 'A modern social platform with real-time messaging, post sharing, and AI-powered content recommendations.',
-    image: '💬',
-    tags: ['React Native', 'Node.js', 'Socket.io'],
-    liveUrl: '#',
-    codeUrl: '#',
+    title: 'Azure Demand Forecasting & Capacity Optimization',
+    description: 'A full-stack end-to-end forecasting application that predicts Azure cloud resource usage using XGBoost, LSTM, and ARIMA models. Features a React dashboard for interactive visualization, model comparison, and capacity planning.',
+    image: 'images/Azure.png',
+    tags: ['React.js', 'Tailwind CSS', 'Lucide React','Python','Flask','Pandas & NumPy','Scikit-Learn'],
+    liveUrl: 'https://github.com/ravitejaatthiraju/Azure-Demand-Forecasting-Capacity-Optimization',
+    codeUrl: 'https://github.com/ravitejaatthiraju/Azure-Demand-Forecasting-Capacity-Optimization',
   },
   {
     id: 4,
-    title: 'Task Management',
-    description: 'Collaborative project management tool with Kanban boards, time tracking, and team analytics.',
-    image: '📋',
-    tags: ['Vue.js', 'Express', 'MongoDB'],
-    liveUrl: '#',
-    codeUrl: '#',
+    title: 'NEW YEAR PROJECT',
+    description: 'A celebratory webpage featuring a live countdown to 2026 accompanied by animated fireworks effects.',
+    image: 'images/new year.jpg',
+    tags: ['HTML5', 'CSS3', 'JavaScript (Canvas API)'],
+    liveUrl: 'https://ravitejaatthiraju.github.io/NEW-YEAR-PROJECT/',
+    codeUrl: 'https://github.com/ravitejaatthiraju/NEW-YEAR-PROJECT',
+  },
+  {
+    id: 5,
+    title: 'Christmas Celebration',
+    description: 'Interactive Christmas webpage with snow, flying Santa animations, music, and gift box revealing inspiring quotes.',
+    image: 'images/christmas.jpg',
+    tags: ['HTML5', 'CSS3', 'JavaScript'],
+    liveUrl: 'https://ravitejaatthiraju.github.io/CHRISTMAS-PROJECT/',
+    codeUrl: 'https://github.com/ravitejaatthiraju/CHRISTMAS-PROJECT',
   },
 ];
 
@@ -107,8 +116,12 @@ const Projects = () => {
                   className="project-card min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)]"
                 >
                   {/* Project Image */}
-                  <div className="h-48 bg-gradient-to-br from-muted to-secondary flex items-center justify-center">
-                    <span className="text-7xl">{project.image}</span>
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
+                    />
                   </div>
 
                   {/* Project Content */}
@@ -134,6 +147,8 @@ const Projects = () => {
                     <div className="flex gap-3">
                       <motion.a
                         href={project.codeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-border hover:border-primary/50 text-sm font-medium transition-colors"
@@ -143,6 +158,8 @@ const Projects = () => {
                       </motion.a>
                       <motion.a
                         href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-accent text-primary-foreground text-sm font-medium"

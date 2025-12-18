@@ -1,13 +1,14 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Mail, Github, Linkedin, Youtube, Phone } from 'lucide-react';
+import { Mail, Github, Linkedin, Youtube, Phone, Instagram } from 'lucide-react';
 
 const socialLinks = [
-  { name: 'Email', icon: Mail, href: 'mailto:hello@example.com', color: 'hover:text-red-400' },
-  { name: 'GitHub', icon: Github, href: 'https://github.com', color: 'hover:text-foreground' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com', color: 'hover:text-blue-400' },
-  { name: 'YouTube', icon: Youtube, href: 'https://youtube.com', color: 'hover:text-red-500' },
-  { name: 'Phone', icon: Phone, href: 'tel:+1234567890', color: 'hover:text-green-400' },
+  { name: 'Email', icon: Mail, href: 'mailto:athirajuteja5@gmail.com', color: 'hover:text-red-400' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/ravitejaatthiraju', color: 'hover:text-foreground' },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/atthiraju-raviteja-68aa6b2b9/', color: 'hover:text-blue-400' },
+  { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com/@ravitejaatthiraju', color: 'hover:text-red-500' },
+  { name: 'Phone', icon: Phone, href: 'tel:+917661072428', color: 'hover:text-green-400' },
+  { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/atthirajuraviteja?igsh=bm41MzZuMjBzZm95', color: 'hover:text-pink-500' },
 ];
 
 const Contact = () => {
@@ -66,7 +67,7 @@ const Contact = () => {
           transition={{ delay: 0.8 }}
           className="text-muted-foreground/50 text-sm mt-20"
         >
-          Designed & Built with ❤️ using React & Tailwind CSS
+          Designed & Built by Atthiraju Raviteja
         </motion.p>
       </div>
     </section>

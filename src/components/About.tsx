@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Download } from 'lucide-react';
 
 const skills = [
-  'React', 'TypeScript', 'Node.js', 'Python', 'AI/ML', 
-  'Tailwind CSS', 'Next.js', 'PostgreSQL', 'AWS', 'Figma'
+  'HTML','React','Lucide React', 'Flask','JavaScript', 'Node.js', 'Python', 'AI/ML', 'CSS', 
+  'Tailwind CSS', 'OpenCV', 'OAuth 2.0', 'Fetch API', 'SpeechRecognition'
 ];
 
 const About = () => {
@@ -41,9 +40,11 @@ const About = () => {
             <div className="relative w-full max-w-md mx-auto aspect-square">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl rotate-6" />
               <div className="absolute inset-0 glass rounded-3xl overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-muted to-secondary flex items-center justify-center">
-                  <span className="text-8xl">👨‍💻</span>
-                </div>
+                <img 
+                   src="images/Prof pic.jpg"
+                   alt="Atthiraju Raviteja" 
+                   className="w-full h-full object-cover" 
+                />
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/30 rounded-full blur-xl" />
@@ -64,26 +65,27 @@ const About = () => {
               variants={itemVariants}
               className="text-4xl md:text-5xl font-bold mt-4 mb-6"
             >
-              Crafting <span className="gradient-text">Digital</span> Solutions
+              Building <span className="gradient-text">Intelligent</span> Experiences
             </motion.h2>
 
             <motion.p
               variants={itemVariants}
               className="text-muted-foreground text-lg leading-relaxed mb-6"
             >
-              I'm a passionate full-stack developer with over 5 years of experience 
-              building modern web applications. My journey started with curiosity 
-              about how things work on the internet, and it evolved into a career 
-              where I get to create impactful digital experiences every day.
+              I am a dedicated Developer and AI enthusiast with a mission to 
+              bridge the gap between complex machine learning algorithms and 
+              user-friendly web applications. With a strong academic foundation 
+              in AI/ML and hands-on experience in Full Stack development, I love 
+              turning raw data into actionable insights.
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-muted-foreground text-lg leading-relaxed mb-8"
             >
-              When I'm not coding, you'll find me exploring new technologies, 
-              contributing to open-source projects, or sharing knowledge through 
-              technical writing and mentorship.
+              I spend my offline time bridging the gap between complex AI tech 
+              and practical use cases—researching breakthroughs, creating educational 
+              content, and solving business problems.
             </motion.p>
 
             {/* Skills */}
@@ -102,18 +104,6 @@ const About = () => {
                   </motion.span>
                 ))}
               </div>
-            </motion.div>
-
-            {/* Resume Download Button */}
-            <motion.div variants={itemVariants} className="mt-8">
-              <a
-                href="/resume.pdf"
-                download="Resume.pdf"
-                className="inline-flex items-center gap-3 px-6 py-3 bg-primary/10 border border-primary/30 rounded-xl text-primary font-medium hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105 group"
-              >
-                <Download className="w-5 h-5 group-hover:animate-bounce" />
-                Download Resume
-              </a>
             </motion.div>
           </div>
         </motion.div>

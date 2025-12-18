@@ -37,7 +37,7 @@ const Hero = () => {
           className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
         >
           Hi, I'm{' '}
-          <span className="gradient-text">Alex Chen</span>
+          <span className="gradient-text">Atthiraju Raviteja</span>
         </motion.h1>
 
         <motion.p
@@ -46,9 +46,9 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto"
         >
-          Building digital experiences that blend creativity with code.
+          Creating intelligent digital solutions by bridging the gap between AI and the web.
           <br />
-          <span className="text-foreground/80">Full-Stack Developer & Designer</span>
+          <span className="text-foreground/80">AI Integration Analyst & Web Developer</span>
         </motion.p>
 
         <motion.div
