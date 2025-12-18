@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Download } from 'lucide-react';
 
 const skills = [
   'React', 'TypeScript', 'Node.js', 'Python', 'AI/ML', 
@@ -101,6 +102,18 @@ const About = () => {
                   </motion.span>
                 ))}
               </div>
+            </motion.div>
+
+            {/* Resume Download Button */}
+            <motion.div variants={itemVariants} className="mt-8">
+              <a
+                href="/resume.pdf"
+                download="Resume.pdf"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-primary/10 border border-primary/30 rounded-xl text-primary font-medium hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105 group"
+              >
+                <Download className="w-5 h-5 group-hover:animate-bounce" />
+                Download Resume
+              </a>
             </motion.div>
           </div>
         </motion.div>
